@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Card</title>
+    <style>
+        body{
+            background-color: #df9797;
+            margin: 0;
+            padding: 20px;
+        }
+        .blog-post-card{
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 200px auto;
+            overflow: hidden; /* Ensures child elements respect border radius */
+        }
+        .post-img{
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 4px solid green;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .post-content{
+            padding: 15px;
+        }
+        .post-title, .post-excerpt{
+            margin: 10px auto;
+            color: goldenrod
+        }
+        .read-more{
+            color: darkgreen;
+            background-color: lightgreen;
+            margin: 20px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .read-more:hover{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-post-card">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.4pjoYat_4sZ55c8hgZUGAwHaEK?w=296&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="what it looks like to win the weed lottery" >
+        <div class="post-content">
+            <h2 class="post-title">Winning the THC lottery</h2>
+            <p class="post-excerpt">Winning the TCH lottery is a very important thing - its something that you are going to want to pass down from children to children. Thats right - no more picking and choosing who gets it. They all do! From You! </p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+    
+    <div class="blog-post-card">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.4pjoYat_4sZ55c8hgZUGAwHaEK?w=296&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="what it looks like to win the weed lottery" >
+        <div class="post-content">
+            <h2 class="post-title">Winning the THC lottery</h2>
+            <p class="post-excerpt">Winning the TCH lottery is a very important thing - its something that you are going to want to pass down from children to children. Thats right - no more picking and choosing who gets it. They all do! From You! </p>
+            <a href="#" class="read-more">Read More</a>
+    </div>
+</body>
+</html>

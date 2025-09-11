@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML Project Idea Generator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        margin-top: 40px;
+        font-size: 2em;
+        text-align: center;
+    }
+    button {
+        background: #ff9800;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1.1em;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 20px 0;
+        transition: background 0.3s;
+    }
+    button:hover {
+        background: #e68900;
+    }
+    #ideasBox {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        width: 100%;
+        max-width: 500px;
+        min-height: 200px;
+        overflow-y: auto;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .idea {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(10px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+</head>
+<body>
+
+<h1>💡 HTML Project Idea Generator</h1>
+<button id="generateBtn">Get New Idea</button>
+<div id="ideasBox"></div>
+<button id="clearbtn" onclick="clearbtn()">Clear Field</button>
+<script>
+const ideas = [
+    "Personal portfolio homepage",
+    "Resume/CV webpage",
+    "Simple blog layout",
+    "Photo gallery",
+    "Product landing page",
+    "Restaurant menu page",
+    "Event invitation page",
+    "Wedding RSVP page",
+    "Travel destination showcase",
+    "Local business homepage",
+    "Online CV for a designer",
+    "Fan page for a celebrity",
+    "Book review page",
+    "Movie review page",
+    "Music album showcase",
+    "Art portfolio",
+    "Photography portfolio",
+    "Single‑page coffee shop site",
+    "Festival schedule page",
+    "Conference agenda page",
+    "Sports team roster page",
+    "Tournament bracket display",
+    "Recipe page",
+    "Recipe collection index",
+    "FAQ page",
+    "Contact form layout (no backend)",
+    "About me page",
+    "Timeline of historical events",
+    "Interactive seating chart (static map)",
+    "Static map of attractions",
+    "Daily habit tracker (manual entry)",
+    "To‑do list layout (no save)",
+    "Static calendar",
+    "Event countdown page",
+    "Custom 404 error page",
+    "HTML email template",
+    "Digital business card",
+    "Product comparison table",
+    "Pricing table",
+    "Leaderboard mockup",
+    "Donation form layout",
+    "Pet adoption profile page",
+    "Travel itinerary page",
+    "Language learning flashcards",
+    "Comic strip viewer",
+    "Fan fiction archive",
+    "Local farmers market directory",
+    "Photography contest submission form",
+    "Customizable greeting card layout",
+    "Virtual museum tour (static images)",
+    "Job board mockup",
+    "Interactive periodic table (static info)",
+    "Budget tracker layout",
+    "Travel blog homepage",
+    "Online bookstore catalog",
+    "Car rental booking form layout",
+    "Digital art gallery",
+    "Personal fitness goal tracker",
+    "Sports schedule page",
+    "Music playlist page",
+    "Festival lineup page",
+    "Art exhibition showcase",
+    "Science project display",
+    "School class timetable",
+    "Resume for a fictional character",
+    "Landing page for a fictional app",
+    "Static weather dashboard (sample data)",
+    "Magazine article layout",
+    "Newspaper front page mockup",
+    "Static e‑commerce product page",
+    "Static checkout page",
+    "Static shopping cart page",
+    "Static login form",
+    "Static sign‑up form",
+    "Static password reset page",
+    "Static profile page",
+    "Static settings page",
+    "Static dashboard layout",
+    "Static admin panel mockup",
+    "Static chat interface",
+    "Static forum thread page",
+    "Static poll/voting page",
+    "Static quiz page",
+    "Static survey form",
+    "Static newsletter signup form",
+    "Static podcast episode page",
+    "Static video gallery",
+    "Static livestream event page",
+    "Static course landing page",
+    "Static lesson page",
+    "Static certificate of completion",
+    "Static leaderboard for a game",
+    "Static scoreboard for sports",
+    "Static match schedule",
+    "Static player profile",
+    "Static rules/regulations page",
+    "Static privacy policy page",
+    "Static terms and conditions page",
+    "Static sitemap page",
+    "Static changelog/release notes page"
+];
+// Add more ideas as needed
+
+document.getElementById("generateBtn").addEventListener("click", () => {
+    const randomIdea = ideas[Math.floor(Math.random() * ideas.length)];
+    const ideaElem = document.createElement("div");
+    ideaElem.className = "idea";
+    ideaElem.textContent = randomIdea;
+    document.getElementById("ideasBox").prepend(ideaElem);
+});
+
+function clearbtn() {
+    document.getElementById("ideasBox").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
